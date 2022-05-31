@@ -1,7 +1,6 @@
-package com.cydeo;
+package com.cydeo.shorts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +15,7 @@ public class ById {
         //  Set up chrome and create WebDriver instance
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
 
         // navigate.to(url)
         // driver.get(url)  ==> shorter way navigating

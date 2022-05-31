@@ -1,10 +1,10 @@
-package com.cydeo;
+package com.cydeo.shorts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BasicNavigation {
+public class GettingCurrentURL {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -17,23 +17,10 @@ public class BasicNavigation {
         // driver.get(url)   // shorter way navigating
         driver.get("https://google.com");
 
-
-        // navigate.back()
-        driver.navigate().back();
-
-
-        // navigate.forward()
-        driver.navigate().forward();
-
-
-        // navigate.refresh()
-        driver.navigate().refresh();
-
-        // driver.close();
-
         Thread.sleep(5000);
 
-        // close all browsers opened bey driver
+        System.out.println("driver.getCurrentUrl()= "+driver.getCurrentUrl());
+
         driver.quit();
 
     }

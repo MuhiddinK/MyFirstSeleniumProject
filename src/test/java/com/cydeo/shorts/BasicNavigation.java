@@ -1,12 +1,12 @@
-package com.cydeo;
+package com.cydeo.shorts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GettingCurrentURL {
+public class BasicNavigation {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         // Set up chrome and create WebDriver instance
         WebDriverManager.chromedriver().setup();
@@ -18,8 +18,22 @@ public class GettingCurrentURL {
         driver.get("https://google.com");
 
 
-        System.out.println("driver.getCurrentUrl()= "+driver.getCurrentUrl());
+        // navigate.back()
+        driver.navigate().back();
 
+
+        // navigate.forward()
+        driver.navigate().forward();
+
+
+        // navigate.refresh()
+        driver.navigate().refresh();
+
+        // driver.close();
+
+        Thread.sleep(5000);
+
+        // close all browsers opened bey driver
         driver.quit();
 
     }

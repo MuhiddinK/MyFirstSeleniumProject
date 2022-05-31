@@ -1,4 +1,4 @@
-package com.cydeo;
+package com.cydeo.shorts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
