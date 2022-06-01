@@ -32,15 +32,15 @@ public class DropdownPractices {
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
         //3. Select Illinois
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         stateDropdown.selectByVisibleText("Illinois");
 
         //4. Select Virginia
-        Thread.sleep(1000);
+        // Thread.sleep(1000);
         stateDropdown.selectByValue("VA");
 
         //5. Select California
-        Thread.sleep(1000);
+        // Thread.sleep(1000);
         stateDropdown.selectByIndex(5);
 
         //6. Verify final selected option is California.
