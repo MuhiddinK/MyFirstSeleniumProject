@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,7 +34,7 @@ public class T1_Alert_Practices {
 
 
         informationAlertButton.click();
-        Thread.sleep(1000);
+
 
         //To be able to click to Alert OK button we need to switch driver's focus to Alert itself.
         Alert alert = driver.switchTo().alert();
@@ -52,5 +53,11 @@ public class T1_Alert_Practices {
 
         Assert.assertEquals(actualText, expectedText, "Actual result text is not as expected!!!");
     }
+
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
+    }
+
 
 }

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -54,6 +55,11 @@ public class T4_IframePractice {
         //assertion of header text is displayed or not
         Assert.assertTrue(headerText.isDisplayed());
 
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        driver.quit();
     }
 
 }
