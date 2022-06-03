@@ -9,7 +9,7 @@ public class JavaFakerPractice {
     public void test1(){
         //Creating Faker object to reach methods
         Faker faker = new Faker();
-        //Faker faker = new Faker(new Locale("fr"));
+        //Faker faker = new Faker(new Locale("fr")); in French
 
         System.out.println("faker.name().firstName() = " + faker.name().firstName());
         System.out.println("faker.name().lastName() = " + faker.name().lastName());
@@ -17,8 +17,8 @@ public class JavaFakerPractice {
         System.out.println("faker.name().fullName() = " + faker.name().fullName());
 
         //numerify() method will generate random numbers in the format we want to get
-        System.out.println("faker.numerify(\"###-###-####\") = "
-                + faker.numerify("###-###-####"));
+        System.out.println("faker.numerify(\"## ## ## ## ## ##\") = "
+                + faker.numerify("## ## ## ## ## ##"));
 
         System.out.println("faker.numerify(\"312-###-####\") = "
                 + faker.numerify("312-###-####"));
