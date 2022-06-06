@@ -61,6 +61,7 @@ public class T1_RegistrationForm {
 
         //11. Select Department/Office
         Select departmentDropdown = new Select((Driver.getDriver().findElement(By.xpath("//select[@name='department']"))));
+        departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
 
         //12. Select Job Title
         //13. Select programming language from checkboxes
