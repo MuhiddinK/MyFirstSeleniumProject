@@ -35,6 +35,8 @@ public class Test_Drag_Drop {
         String expectedBigCircleText = "You did great!";
 
         Assert.assertEquals(actualBigCircleText, expectedBigCircleText);
+
+        Driver.closeDriver();
     }
 
 }

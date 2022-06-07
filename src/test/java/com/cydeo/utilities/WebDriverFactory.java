@@ -11,9 +11,11 @@ public class WebDriverFactory {
         if(browserType.equalsIgnoreCase("chrome")){
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
+
         }else if(browserType.equalsIgnoreCase("firefox")){
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
+            
         }else{
             System.out.println("Given browser type dose not exit/or is not current supported");
             System.out.println("Driver = null");
